@@ -25,7 +25,7 @@ The following table provides the weight used in [our paper](https://arxiv.org/ab
 | Model                     | Img size | Weights                                                                                                       |
 |---------------------------|:--------:|:--------------------------------------------------------------------------------------------------------------|
 | **Nano**                  |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano.pth)                 |
-| **Nano-ViT**              |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/nano-ViT.pth)             |
+| **Nano-ViT**              |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT.pth)             |
 | **L**                     |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L.pth)                    |
 | **L-ViT**                 |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L-ViT.pth)                |
 | **Nano-noAug**            |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-noAug.pth)           |
