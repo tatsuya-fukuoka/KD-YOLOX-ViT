@@ -36,7 +36,7 @@ The following table provides the weight used in [our paper](https://arxiv.org/ab
 | **Nano-noAug-ViT-L-ViT**  |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT-L-ViT.pth)       |
 
 
-Because our computational limitation, the ViT model could not be pre-trained with a bigger dataset, such as COCO dataset. Instead, we start the training with pre-trained weight from the model without the ViT layer.
+Because of current computational limitations, the ViT model could not be pre-trained with a bigger dataset, such as the COCO dataset. Instead, we start the training with pre-trained weight from the model without the ViT layer.
 
 ## Knowledge Distillation
 The following illustration introduces the Knowledge Distillation principle used for the KD-YOLOX-ViT.
