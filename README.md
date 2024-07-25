@@ -19,6 +19,24 @@ This code has two primary contributions:
 
 Furthermore, YOLOX-ViT and KD-YOLOX-ViT have been evaluated using the proposed [SWDD](https://zenodo.org/records/10528135) object detection dataset. This dataset is a Side Scan Sonar image of walls manually annotated following the COCO annotation. It has 864 training images, a 6-minute 57-second SSS video, and 6243 extracted video frames with its manually annotated ground truth.   
 
+## Weights
+The following table provides the weight used in [our paper](https://arxiv.org/abs/2403.09313).
+
+| Model                     | Img size | Weights                                                                                                       |
+|---------------------------|:--------:|:--------------------------------------------------------------------------------------------------------------|
+| **Nano**                  |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano.pth)                 |
+| **Nano-ViT**              |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT.pth)             |
+| **L**                     |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L.pth)                    |
+| **L-ViT**                 |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L-ViT.pth)                |
+| **Nano-noAug**            |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-noAug.pth)           |
+| **Nano-ViT-noAug**        |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT-noAug.pth)       |
+| **Nano-noAug-L**          |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-L.pth)               |
+| **Nano-noAug-L-ViT**      |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-L-ViT.pth)           |
+| **Nano-noAug-ViT-L**      |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT-L.pth)           |
+| **Nano-noAug-ViT-L-ViT**  |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT-L-ViT.pth)       |
+
+
+Because our computational limitation, the ViT model could not be pre-trained with a bigger dataset, such as COCO dataset. Instead, we start the training with pre-trained weight from the model without the ViT layer.
 
 ## Knowledge Distillation
 The following illustration introduces the Knowledge Distillation principle used for the KD-YOLOX-ViT.
