@@ -19,13 +19,13 @@ This code has two primary contributions:
 
 Furthermore, YOLOX-ViT and KD-YOLOX-ViT have been evaluated using the proposed [SWDD](https://zenodo.org/records/10528135) object detection dataset. This dataset is a Side Scan Sonar image of walls manually annotated following the COCO annotation. It has 864 training images, a 6-minute 57-second SSS video, and 6243 extracted video frames with its manually annotated ground truth.   
 
-## Weights
+## Weights after training with the SWDD dataset
 The following table provides the weight used in [our paper](https://arxiv.org/abs/2403.09313).
 
 | Model                     | Img size | Weights                                                                                                       |
 |---------------------------|:--------:|:--------------------------------------------------------------------------------------------------------------|
 | **Nano**                  |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano.pth)                 |
-| **Nano-ViT**              |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-ViT.pth)             |
+| **Nano-ViT**              |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/nano-ViT.pth)             |
 | **L**                     |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L.pth)                    |
 | **L-ViT**                 |   640    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-L-ViT.pth)                |
 | **Nano-noAug**            |   416    | [github](https://github.com/remaro-network/KD-YOLOX-ViT/releases/download/v0.1/swdd-nano-noAug.pth)           |
