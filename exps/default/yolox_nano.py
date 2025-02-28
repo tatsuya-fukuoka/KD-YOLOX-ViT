@@ -28,18 +28,18 @@ class Exp(MyExp):
         # ---------------- Knowledge Distillation config ---------------- #
         
         #KD set to True activate add the KD loss to the ground truth loss
-        self.KD = False
+        self.KD = True #False
         
         #Teacher model for the Knowledge Distillation
         self.teacher = "yolox_l"
         
         #Path of the weights of the teacher for the Knowledge Distillation
-        self.teacher_weights = "weights/"
+        self.teacher_weights = "./YOLOX_outputs/yolox_l/best_ckpt.pth" #yolox-lで学習した重みを指定
         
         #KD_Online set to False recquires the teacher FPN logits saved to the "folder_KD_directory" folder
         #Then the student training will use the teacher FPN logits
         #Otherwise, if KD_Online set to True the student use the online data augmentation and does not recquire saved teacher FPN logits
-        self.KD_online = False
+        self.KD_online = True #False
         
         #KD_Teacher_Inference set to True save the FPN logits before using offline KD
         
@@ -73,13 +73,16 @@ class Exp(MyExp):
             self.shear = 0
             
         # Define yourself dataset path
-        self.data_dir = "datasets/COCO/SWDD/"
+        self.data_dir = "/mnt/datasets/face_yolox_coco/" # 修正
 
         self.train_ann = "instances_train2017.json"
         self.val_ann = "instances_val2017.json"
         
-        self.num_classes = 2
-
+        self.num_classes = 1 # 修正
+        self.max_epoch = 100
+        self.eval_interval = 1
+        self.save_history_ckpt = False
+        
     def get_model(self, sublinear=False):
 
         def init_yolo(M):

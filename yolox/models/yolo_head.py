@@ -227,7 +227,7 @@ class YOLOXHead(nn.Module):
                     teacher_output = torch.cat([reg_output, obj_output, cls_output], 1)
                     batch_info = {'outputs': teacher_output}
                     if(name_image != None):
-                        file_path = f'{self.folder_KD_directory}teacher_distillation_{name_image}-{fpn_logit}.npy'
+                        file_path = f'{self.folder_KD_directory}{name_image}-{fpn_logit}.npy' # 本家から修正
                         np.save(file_path, batch_info)
                 ######################KD WITH LOGIT FOR INFERENCE - END#######################
                 output = torch.cat(
@@ -311,7 +311,6 @@ class YOLOXHead(nn.Module):
         # tsize gives the size on the image which is random due to the online data augmentation
         # the trained weights can be modified, by default it takes the last 300 epoch of the corresponding YOLOX architecture use for the inference 
         
-        
         yolox_command = f"python3 tools/demo.py image -n {self.teacher} --path '{self.folder_KD_directory}teacher_distillation_{filename}' --conf 0.5 --nms 0.45 --tsize {tsize} --ckpt {self.teacher_weights} --save_result"
         os.system(yolox_command)
 
@@ -383,7 +382,6 @@ class YOLOXHead(nn.Module):
                 if self.KD_Online:
 
                     tsize_value = size_image[0]
-                    
                     
                     # generate and save the current image
                     image_tensor = imgs[image_number]

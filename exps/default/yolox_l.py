@@ -21,7 +21,7 @@ class Exp(MyExp):
         # ---------------- Knowledge Distillation config ---------------- #
         
         #KD set to True activate add the KD loss to the ground truth loss
-        self.KD = False
+        self.KD = False # yolox-nanoで知識蒸留を行う場合はTrueにする
         
         #KD_Online set to False recquires the teacher FPN logits saved to the "folder_KD_directory" folder
         #Then the student training will use the teacher FPN logits
@@ -60,12 +60,13 @@ class Exp(MyExp):
             self.shear = 0
             
         # Define yourself dataset path
-        self.data_dir = "datasets/COCO/SWDD/"
+        self.data_dir = "/mnt/datasets/face_yolox_coco/" # 修正
         self.train_ann = "instances_train2017.json"
         self.val_ann = "instances_val2017.json"
 
-        self.num_classes = 2#71
+        self.num_classes = 1 # 修正
 
-        self.max_epoch = 400
+        self.max_epoch = 50 # 修正
         self.data_num_workers = 4
-        self.eval_interval = 10 
+        self.eval_interval = 1 
+        self.save_history_ckpt = False
